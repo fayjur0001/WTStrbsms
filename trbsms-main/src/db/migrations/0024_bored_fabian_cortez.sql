@@ -1,0 +1,1 @@
+ALTER TABLE "one_time_rents" ALTER COLUMN "original_price" DROP DEFAULT;

@@ -1,0 +1,1 @@
+ALTER TYPE "public"."rent_status" ADD VALUE 'Timed Out';

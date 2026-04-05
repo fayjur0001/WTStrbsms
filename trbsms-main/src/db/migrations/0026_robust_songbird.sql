@@ -1,0 +1,1 @@
+ALTER TABLE "long_term_rents" ALTER COLUMN "rent_type" DROP DEFAULT;

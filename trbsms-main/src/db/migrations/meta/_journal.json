@@ -1,0 +1,195 @@
+{
+  "version": "7",
+  "dialect": "postgresql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "7",
+      "when": 1745774550462,
+      "tag": "0000_striped_zeigeist",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1746044639399,
+      "tag": "0001_awesome_emma_frost",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1746045304640,
+      "tag": "0002_round_dreadnoughts",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1746149115384,
+      "tag": "0003_glossy_tomorrow_man",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "7",
+      "when": 1746205540653,
+      "tag": "0004_pink_jigsaw",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "7",
+      "when": 1746215781257,
+      "tag": "0005_slow_shen",
+      "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "7",
+      "when": 1746478539509,
+      "tag": "0006_supreme_proemial_gods",
+      "breakpoints": true
+    },
+    {
+      "idx": 7,
+      "version": "7",
+      "when": 1747621675394,
+      "tag": "0007_smooth_winter_soldier",
+      "breakpoints": true
+    },
+    {
+      "idx": 8,
+      "version": "7",
+      "when": 1750419244179,
+      "tag": "0008_spotty_miss_america",
+      "breakpoints": true
+    },
+    {
+      "idx": 9,
+      "version": "7",
+      "when": 1750451356578,
+      "tag": "0009_material_kate_bishop",
+      "breakpoints": true
+    },
+    {
+      "idx": 10,
+      "version": "7",
+      "when": 1751407838257,
+      "tag": "0010_bright_iron_patriot",
+      "breakpoints": true
+    },
+    {
+      "idx": 11,
+      "version": "7",
+      "when": 1751412718227,
+      "tag": "0011_high_supernaut",
+      "breakpoints": true
+    },
+    {
+      "idx": 12,
+      "version": "7",
+      "when": 1751715315287,
+      "tag": "0012_lyrical_fallen_one",
+      "breakpoints": true
+    },
+    {
+      "idx": 13,
+      "version": "7",
+      "when": 1751718306882,
+      "tag": "0013_same_masque",
+      "breakpoints": true
+    },
+    {
+      "idx": 14,
+      "version": "7",
+      "when": 1751746121250,
+      "tag": "0014_flowery_sebastian_shaw",
+      "breakpoints": true
+    },
+    {
+      "idx": 15,
+      "version": "7",
+      "when": 1752148421764,
+      "tag": "0015_exotic_pretty_boy",
+      "breakpoints": true
+    },
+    {
+      "idx": 16,
+      "version": "7",
+      "when": 1752359203526,
+      "tag": "0016_dusty_chat",
+      "breakpoints": true
+    },
+    {
+      "idx": 17,
+      "version": "7",
+      "when": 1753216937837,
+      "tag": "0017_great_kang",
+      "breakpoints": true
+    },
+    {
+      "idx": 18,
+      "version": "7",
+      "when": 1755286639376,
+      "tag": "0018_stormy_raza",
+      "breakpoints": true
+    },
+    {
+      "idx": 19,
+      "version": "7",
+      "when": 1755861140532,
+      "tag": "0019_premium_kang",
+      "breakpoints": true
+    },
+    {
+      "idx": 20,
+      "version": "7",
+      "when": 1755896174857,
+      "tag": "0020_solid_silver_samurai",
+      "breakpoints": true
+    },
+    {
+      "idx": 21,
+      "version": "7",
+      "when": 1756578217759,
+      "tag": "0021_perfect_masked_marvel",
+      "breakpoints": true
+    },
+    {
+      "idx": 22,
+      "version": "7",
+      "when": 1756910456457,
+      "tag": "0022_shallow_terror",
+      "breakpoints": true
+    },
+    {
+      "idx": 23,
+      "version": "7",
+      "when": 1757189761832,
+      "tag": "0023_dear_lady_bullseye",
+      "breakpoints": true
+    },
+    {
+      "idx": 24,
+      "version": "7",
+      "when": 1757189783162,
+      "tag": "0024_bored_fabian_cortez",
+      "breakpoints": true
+    },
+    {
+      "idx": 25,
+      "version": "7",
+      "when": 1757191868755,
+      "tag": "0025_high_ser_duncan",
+      "breakpoints": true
+    },
+    {
+      "idx": 26,
+      "version": "7",
+      "when": 1757191884367,
+      "tag": "0026_robust_songbird",
+      "breakpoints": true
+    }
+  ]
+}

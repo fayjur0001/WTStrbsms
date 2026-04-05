@@ -1,0 +1,1 @@
+ALTER TABLE "one_time_rents" ADD COLUMN "original_price" real DEFAULT 0 NOT NULL;

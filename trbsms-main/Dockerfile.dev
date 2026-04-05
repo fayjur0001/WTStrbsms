@@ -1,0 +1,17 @@
+FROM node:22-alpine
+
+ENV XDG_CACHE_HOME=/tmp/.cache
+
+RUN corepack enable
+
+WORKDIR /app
+
+COPY package.json pnpm-lock.yaml ./
+
+RUN pnpm i
+
+COPY . .
+
+EXPOSE 3000
+
+CMD ["pnpm", "dev"]

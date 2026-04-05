@@ -1,0 +1,12 @@
+/.git
+/.next
+/node_modules
+/.dockerignore
+/.gitignore
+/Dockerfile.dev
+/Dockerfile.prod
+/LICENSE
+/README.md
+/.env
+/storage
+/build

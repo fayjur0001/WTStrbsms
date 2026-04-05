@@ -1,0 +1,49 @@
+services:
+  drk_sms_web_prod:
+    user: ${RUNING_USER}
+    restart: always
+    build:
+      context: .
+      dockerfile: Dockerfile.prod
+    container_name: drk_sms_web_prod
+    ports:
+      - "8080:3000"
+    environment:
+      NODE_ENV: production
+      DATABASE_URL: postgres://postgres:${POSTGRES_PASSWORD:-postgres}@drk_sms_db_prod:5432/db
+    env_file:
+      - .env
+    depends_on:
+      - drk_sms_db_prod
+
+  drk_sms_db_prod:
+    restart: always
+    image: postgres:17.4-alpine3.21
+    container_name: drk_sms_db_prod
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: db
+    volumes:
+      - drk_sms_db_data_prod:/var/lib/postgresql/data
+
+  drk_sms_db_backup:
+    image: prodrigestivill/postgres-backup-local
+    container_name: drk_sms_db_backup
+    restart: always
+    environment:
+      POSTGRES_HOST: drk_sms_db_prod
+      POSTGRES_PORT: 5432
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: db
+      SCHEDULE: "@daily"
+      BACKUP_KEEP_DAYS: 2
+    volumes:
+      - ./storage/db-backups:/backups
+    depends_on:
+      - drk_sms_db_prod
+
+volumes:
+  drk_sms_db_data_prod:
+    name: drk_sms_db_data_prod

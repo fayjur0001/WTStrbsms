@@ -1,0 +1,40 @@
+FROM node:22-alpine AS base
+
+ENV PNPM_HOME="/pnpm"
+ENV PATH="$PNPM_HOME:$PATH"
+ENV XDG_CACHE_HOME=/tmp/.cache
+
+RUN corepack enable
+
+WORKDIR /app
+
+FROM base AS packages
+
+COPY package.json pnpm-lock.yaml ./
+
+FROM packages AS dev-packages
+
+RUN pnpm install
+
+FROM packages AS prod-packages
+
+RUN pnpm install --prod
+
+FROM base AS builder
+
+COPY --from=dev-packages /app/node_modules ./node_modules
+
+COPY . .
+
+RUN pnpm build
+
+FROM base AS runner
+
+COPY --from=builder /app/.next ./.next
+COPY --from=prod-packages /app/node_modules ./node_modules
+COPY . .
+
+RUN chmod -R 777 .next
+
+EXPOSE 3000
+CMD ["pnpm", "start"]

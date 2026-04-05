@@ -1,0 +1,1 @@
+ALTER TYPE "public"."one_time_rent_status" ADD VALUE 'Completed';
