@@ -179,13 +179,11 @@ export default function Client() {
           Sign Up
         </Button>
 
-        {/* Back Button */}
+        {/* Back Button with hover effect */}
         <Button
           type="button"
-          variant="secondary"
           onClick={() => router.back()}
-          className="flex-1 md:h-12 md:text-lg"
-          style={{ backgroundColor: "#AEDEE0", color: "#333" }}
+          className="flex-1 md:h-12 md:text-lg bg-[#AEDEE0] text-[#333] hover:bg-[#9fd4d8] transition-colors duration-200"
         >
           Back
         </Button>
