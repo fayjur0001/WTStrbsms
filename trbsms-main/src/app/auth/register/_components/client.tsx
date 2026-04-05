@@ -165,18 +165,8 @@ export default function Client() {
         before signing up.
       </p>
 
-      {/* Buttons Section: Back + Sign Up */}
+      {/* Buttons Section: Sign Up + Back */}
       <div className="flex justify-between items-center gap-4">
-        {/* Back Button */}
-        <Button
-          type="button"
-          variant="secondary"
-          onClick={() => router.back()}
-          className="flex-1 md:h-12 md:text-lg"
-        >
-          Back
-        </Button>
-
         {/* Sign Up Button */}
         <Button
           type="submit"
@@ -187,6 +177,17 @@ export default function Client() {
             <LoaderCircle className="animate-spin" />
           )}
           Sign Up
+        </Button>
+
+        {/* Back Button */}
+        <Button
+          type="button"
+          variant="secondary"
+          onClick={() => router.back()}
+          className="flex-1 md:h-12 md:text-lg"
+          style={{ backgroundColor: "#333", color: "#fff" }}
+        >
+          Back
         </Button>
       </div>
 
