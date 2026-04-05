@@ -24,7 +24,6 @@ import { LoaderCircle } from "lucide-react";
 
 export default function Client() {
   const [hasError, setHasError] = useState(false);
-
   const router = useRouter();
 
   const form = useForm<z.infer<typeof schema>>({
@@ -52,12 +51,9 @@ export default function Client() {
   });
 
   const submit = form.handleSubmit(async (data) => {
-    if (submitMutation.isPending) {
-      return;
-    }
+    if (submitMutation.isPending) return;
 
     setHasError(false);
-
     submitMutation.mutate(data);
   });
 
@@ -82,6 +78,7 @@ export default function Client() {
               </FormItem>
             )}
           />
+
           <FormField
             control={form.control}
             name="email"
@@ -99,6 +96,7 @@ export default function Client() {
               </FormItem>
             )}
           />
+
           <FormField
             control={form.control}
             name="password"
@@ -117,6 +115,7 @@ export default function Client() {
               </FormItem>
             )}
           />
+
           <FormField
             control={form.control}
             name="confirmPassword"
@@ -135,6 +134,7 @@ export default function Client() {
               </FormItem>
             )}
           />
+
           <FormField
             control={form.control}
             name="pinCode"
@@ -153,6 +153,7 @@ export default function Client() {
           />
         </Form>
       </div>
+
       <p>
         Please read{" "}
         <Link
@@ -163,20 +164,37 @@ export default function Client() {
         </Link>{" "}
         before signing up.
       </p>
-      <div className="space-y-4">
-        <Button className="w-full font-bold md:h-13 md:text-2xl">
+
+      {/* Buttons Section: Back + Sign Up */}
+      <div className="flex justify-between items-center gap-4">
+        {/* Back Button */}
+        <Button
+          type="button"
+          variant="secondary"
+          onClick={() => router.back()}
+          className="flex-1 md:h-12 md:text-lg"
+        >
+          Back
+        </Button>
+
+        {/* Sign Up Button */}
+        <Button
+          type="submit"
+          className="flex-1 md:h-12 md:text-lg flex items-center justify-center gap-2"
+        >
           {(submitMutation.isPending ||
             (submitMutation.isSuccess && !hasError)) && (
             <LoaderCircle className="animate-spin" />
           )}
-          Sign up
+          Sign Up
         </Button>
-        <div className="text-right">
-          Already a member?{" "}
-          <Link href="/auth/login" className="text-primary underline font-bold">
-            Sign in
-          </Link>
-        </div>
+      </div>
+
+      <div className="text-right mt-2">
+        Already a member?{" "}
+        <Link href="/auth/login" className="text-primary underline font-bold">
+          Sign in
+        </Link>
       </div>
     </form>
   );
